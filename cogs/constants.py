@@ -11,7 +11,6 @@ def load_personality(filename="persona.json"):
         try:
             with open(filename, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                # Возвращаем несколько фраз из JSON
                 description = data.get("personality", "")
                 style = data.get("style", "")
                 if description and style:
