@@ -5,6 +5,8 @@ from cogs.dialog import get_response
 
 def main():
     print(PERSONALITY)
+    name = get_user_name()
+    print(f"{NAME}: О, {name}, нарешті {random_greeting")
     print(f"{NAME}: {random_greeting()} Пиши що хочеш або 'exit', якщо вирішив втекти. Сьогодні я {MOOD}!")
 
     while True:
