@@ -1,11 +1,11 @@
-from cogs.constants import NAME, PERSONALITY
+from cogs.constants import NAME, PERSONALITY, MOOD
 from cogs.greetings import random_greeting
 from cogs.dialog import get_response
 
 
 def main():
-    print(f"{NAME} ({PERSONALITY}): {random_greeting()}")
-    print("Пиши або 'exit', якщо вирішив втекти.")
+    print(PERSONALITY)
+    print(f"{NAME}: {random_greeting()} Пиши що хочеш або 'exit', якщо вирішив втекти. Сьогодні я {MOOD}!")
 
     while True:
         user = input("Ти: ").strip()
