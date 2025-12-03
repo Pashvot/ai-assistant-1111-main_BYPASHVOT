@@ -1,6 +1,7 @@
 import os
 import json
-from token import NAME
+from .constants import NAME
+
 
 def load_user():
     if os.path.exists("user.json"):
@@ -10,10 +11,11 @@ def load_user():
                 if not user:
                     return None
                 data = json.loads(user)
-                return data.get ("name")
+                return data.get("name")
         except Exception:
             return None
     return None
+
 
 def get_user_name():
     name = load_user()
@@ -24,8 +26,8 @@ def get_user_name():
         print(f"{NAME}: Як тебе звати?")
         ask_name = input("Ти: ").strip()
         if not ask_name:
-            print(f"{NAME}: Приємно познайомитись, {ask_name}!")
+            print(f"{NAME}: Та ну! Назви себе нормально.")
         else:
             with open("user.json", "w", encoding="utf-8") as file:
-                json.dump({"name": ask_name}, f)
+                json.dump({"name": ask_name}, file)
             return ask_name
