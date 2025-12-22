@@ -4,7 +4,6 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from google import genai
 
-# Додаємо шлях до файлу assistant_api.py
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from assistant_api import send_message as ai_send_message, load_user_profile
 
